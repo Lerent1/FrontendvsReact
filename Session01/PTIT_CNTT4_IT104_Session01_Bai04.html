@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="inputNumber">
+  <button onclick="check()">check</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const input = document.getElementById("inputNumber").value;
+      const number = Number(input);
+
+      const result = document.getElementById("result");
+
+      if (input.trim() === '' || isNaN(number)) {
+        result.textContent = `Not a number`;
+        return;
+      }
+      if (number % 2 === 0) {
+        result.textContent = `${number} is an even number`;
+      } else {
+        result.textContent = `${number} is odd`;
+      }
+    }
+  </script>
+</body>
+</html>
