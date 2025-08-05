@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+            name: "Dev",
+            age: 20,
+            listMonhoc: [
+                { subject: "Math", score: 9 },
+                { subject: "English", score: 7.5 },
+                { subject: "Physics", score: 6 },
+                { subject: "Literature", score: 8.5 }
+            ]
+        };
+
+        const getStudentSummary = (student) => {
+            const {name , age, listMonhoc} = student;
+            const totalScore = listMonhoc.reduce((sum, subject) => sum + subject.score, 0);
+            const averageScore = totalScore / listMonhoc.length;
+            let message;
+            if (averageScore >= 8.5) {
+                message = `Hoc sinh gioi`;
+            } else if (averageScore >= 7) {
+                message = `Hoc sinh kha`;
+            } else if (averageScore >= 5) {
+                message = `Hoc sinh trung binh`;
+            } else{
+                message = `Hoc sinh yeu`;
+            }
+
+            let hight = listMonhoc[0];
+            let low = listMonhoc[0];
+
+            for (let i = 1; i < listMonhoc.length; i++) {
+                const subject = listMonhoc[i];
+                if (subject.score > hight.score) {
+                    hight = subject;
+                }
+                if (subject.score < low.score) {
+                    low = subject;
+                }
+            }
+
+            return `
+            ${name} is ${age} years old.
+            Average score: ${averageScore.toFixed(2)} -> ${message}.
+            Best subject: ${hight.subject}(${hight.score}).
+            Weakest subject: ${low.subject}(${low.score}).`;
+        }
+
+        console.log(getStudentSummary(student));
+    </script>
+</body>
+</html>

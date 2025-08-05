@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const typeConsole = (type = "log") => {
+        if (typeof console[type] === "function") {
+            console[type](`Đây là type: ${type}`);
+        } else {
+            console.log(`Type ${type} khong hop le mac dinh su dung log`);
+            console.log(`Day la type: log`);
+        }
+    };
+    console.log(typeConsole("log"));
+    console.log(typeConsole("warn"));
+    console.log(typeConsole("error"));
+    console.log(typeConsole());
+    </script>
+</body>
+</html>
