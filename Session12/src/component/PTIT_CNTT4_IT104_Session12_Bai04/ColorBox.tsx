@@ -17,8 +17,7 @@ export default function ColorBox() {
             justifyContent: "center",
             color: "white",
             fontWeight: "bold"
-          }}
-        >
+          }}>
           BOX
         </div>
       ))}
