@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ColorBox() {
-  const boxes = ["red", "green", "blue"]; // màu của 3 hộp
+  const boxes = ["red", "green", "blue"];
 
   return (
     <div style={{ display: "flex", gap: "10px"}}>
