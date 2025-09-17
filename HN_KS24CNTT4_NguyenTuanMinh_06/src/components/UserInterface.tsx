@@ -1,37 +1,46 @@
 import { Plus, Zap } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 
 type State = {
+    id: number;
     name: string;
     price: number;
     status: boolean;
 }
 
 export default function UserInterface() {
-    const users = [
+    const [users, setUsers] = useState<State[]>([]);
+    const initial: State[] = [
         {
+            id: 1,
             name: "Tran Van Hung",
             price: 550000,
             status: true,
         },
         {
+            id: 2,
             name: "Le Thi Mai",
             price: 780000,
             status: false,
         },
         {
+            id: 3,
             name: "Pham Minh Duc",
             price: 420000,
             status: true,
         },
     ]
-    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("users", JSON.stringify(initial));
 
-    localStorage.getItem(JSON.parse("users"));
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        
-    }
+    const handleDelete = (id: number) => {
+        const userToDelete = users.find(u => u.id === id);
+        if (!userToDelete) return;
+        const confirmed = window.confirm(`Ba co chac chan muon xoa`);
+        if (confirmed) {
+            const updated = users.filter(u => u.id !== id);
+            setUsers(updated);
+        }
+    };
 
     return (
         <div className='bg-gray-200 min-h-screen p-4 sm:p-6 md:p-10'>

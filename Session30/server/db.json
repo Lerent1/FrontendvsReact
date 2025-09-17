@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Minh vip pro",
+      "age": 19
+    },
+    {
+      "id": 2,
+      "name": "Minh",
+      "age": 19
+    }
+  ],
+  "products": [
+    {
+      "name": "Nguyen",
+      "isCompleted": false,
+      "id": 1
+    },
+    {
+      "name": "Nguyen Tuan Minh",
+      "isCompleted": false,
+      "id": 2
+    },
+    {
+      "name": "Nguyễn Tuấn Minh",
+      "isCompleted": true,
+      "id": 3
+    }
+  ]
+}
