@@ -1,30 +1,23 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "hoc",
-      "image": "",
-      "date": "17/9",
-      "status": true
-    },
-    {
       "id": 2,
-      "title": "choi",
-      "image": "",
+      "title": "học API",
+      "image": "typicode",
       "date": "17/9",
-      "status": true
+      "status": false
     },
     {
       "id": 3,
-      "title": "hoc",
-      "image": "",
+      "title": "học json-server",
+      "image": "typicode",
       "date": "17/9",
       "status": true
     },
     {
-      "title": "lol",
-      "image": "hahaha",
-      "date": "17/9/2025",
+      "title": "choi",
+      "image": "choi",
+      "date": "9/18/2025",
       "status": true,
       "id": 4
     }
