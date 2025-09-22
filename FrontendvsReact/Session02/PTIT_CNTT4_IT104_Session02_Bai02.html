@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHello(name, weather){
+            if(weather == "sunny"){
+                console.log(`Xin chao ${name} Hom nay troi nang tuyet voi`);
+            } else if(weather == "rainy"){
+                console.log(`Xin chao ${name} Hom nay troi mua hay mang theo o`);
+            } else {
+                console.log(`Xin chao ${name} Hom nay thoi tiet khong xac dinh`);
+            }
+        }
+        console.log(sayHello("Nguyen An", "sunny"));
+        console.log(sayHello("Nguyen An", "rainy"));
+        console.log(sayHello("Nguyen An", "lol"));
+    </script>
+</body>
+</html>

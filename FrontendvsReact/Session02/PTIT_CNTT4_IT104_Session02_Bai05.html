@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let phoneBook = [];
+        function add(name, phone, email){
+            phoneBook.push(name);
+            phoneBook.push(phone);
+            phoneBook.push(email);
+        }
+        function show(phoneBook){
+            console.log(phoneBook);
+        }
+        add("Tuan Minh", "123456789", "minh@gmail.com");
+        show(phoneBook);
+    </script>
+</body>
+</html>

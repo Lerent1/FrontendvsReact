@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let users = {
+            name: "John",
+            age: 25,
+            location: {
+                city: "Hanoi",
+                country: "Vietnam"
+            },
+            contact: {
+                email: "john@example.com",
+                phone: "0123456789"
+            },
+            job: {
+                title: "Developer",
+                company: "Tech Corp"
+            }
+        };
+
+        const show = (user) => {
+            const { name, age, location = {}, contact = {}, job = {} } = user;
+            const { city = 'unknown', country = 'unknown' } = location;
+            const { email = 'unknown', phone = 'unknown' } = contact;
+            const { title = 'unknown', company = 'unknown' } = job;
+            return `${name} is ${age} years old, lives in ${city}, ${country}, works as ${title} at ${company}, and can be contacted via ${email} or ${phone}.`
+        };
+
+        console.log(show(user));
+    </script>
+</body>
+</html>
