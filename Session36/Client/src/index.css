@@ -1,0 +1,116 @@
+.task-manager-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.task-manager-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Card */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+}
+
+/* Add task form */
+.add-task-form input,
+.add-task-form select {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.add-task-form .add-button {
+  background: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-task-form button:hover {
+  opacity: 0.9;
+}
+
+/* Filter controls */
+.filter-controls select,
+.filter-controls input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Task item */
+.task-item {
+  justify-content: space-between;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-text {
+  flex: 1;
+}
+
+/* Badge styles */
+.badge {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.badge-cao {
+  background-color: #dc3545; /* đỏ */
+}
+
+.badge-trung-bình {
+  background-color: #fd7e14; /* cam */
+}
+
+.badge-thấp {
+  background-color: #28a745; /* xanh lá */
+}
+
+/* Icon buttons */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.icon-button:hover {
+  opacity: 0.7;
+}
+
+.icon-button.delete {
+  color: #dc3545;
+}
+
+.icon-button.edit {
+  color: #007bff;
+}
